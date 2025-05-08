@@ -5,7 +5,13 @@ Dotfiles for OpenBSD.
 
 doas
 
-    $ echo "permit persist <user>" > /etc/doas.conf
+    $ echo "permit persist USERNAME" > /etc/doas.conf
+
+apmd
+
+    $ rcctl enable apmd
+    $ rcctl set apmd flags -A
+    $ rcctl start apmd
 
 xenodm
 

@@ -4,6 +4,7 @@
 # ~/.xsession
 #
 
+export LANG=en_US.UTF-8
 export ENV=$HOME/.kshrc
 
 xset b off
@@ -12,4 +13,4 @@ xrdb -merge $HOME/.Xresources
 xrandr --dpi 192
 xsetroot -solid "#172124"
 
-cwm
+/usr/X11R6/bin/cwm

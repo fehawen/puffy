@@ -9,10 +9,13 @@ Xft.antialias: 1
 Xft.rgba: rgb
 
 ! 16, 24, 32, 48, 64
-Xcursor.size: 32
+Xcursor.size: 64
 Xcursor.theme: default
 
-! XTerm*termName: xterm-16color
+! pixelsize is relative to screen resolution, size is relative to DPI.
+XTerm*faceName: xft:monospace:size=11
+*font: xft:monospace:size=11
+
 XTerm*termName: xterm-256color
 XTerm*geometry: 86x24
 XTerm*internalBorder: 60
@@ -25,40 +28,49 @@ XTerm*trimSelection: true
 XTerm*renderFont: true
 XTerm*wideChars: true
 XTerm*visualBell: false
+XTerm*allowBoldFonts: false
+XTerm*scrollKey: true
+XTerm*fullscreen: never
+XTerm*cutToBeginningOfLine: false
+XTerm*cutNewline: false
+XTerm*metaSendsEscape: true
+XTerm*saveLines: 10000
+XTerm*bellIsUrgent: true
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*on2Clicks: word
+XTerm*on3Clicks: line
 
-XTerm.vt100.translations: #override \n\
-    Shift Ctrl <KeyPress> v:insert-selection(CLIPBOARD) \n\
-    Shift Ctrl <KeyPress> c:select-set(CLIPBOARD)
+*VT100*translations: #override \n\
+    Shift Ctrl <KeyPress> c: copy-selection(SELECT) \n\
+    Shift Ctrl <KeyPress> v: insert-selection(SELECT) \n\
+    Shift <Btn1Down>: exec-formatted("xdg-open '%t'", SELECT)
 
-! pixelsize is relative to screen resolution, size is relative to DPI.
-XTerm*faceName: xft:monospace:size=11
-*font: xft:monospace:size=11
+#define FG #b2bebf
+#define BG #1e282c
+#define GREY #566166
+#define RED #b56666
+#define GREEN #779687
+#define YELLOW #b98675
+#define BLUE #5e828f
+#define MAGENTA #b48291
+#define CYAN #7ab1b3
 
-*foreground: #b2bebf
-*background: #1e282c
-
-*cursorColor: #b2bebf
-
-*color0: #1e282c
-*color8: #566166
-
-*color1: #b56666
-*color9: #b56666
-
-*color2: #779687
-*color10: #779687
-
-*color3: #b98675
-*color11: #b98675
-
-*color4: #5e828f
-*color12: #5e828f
-
-*color5: #b48291
-*color13: #b48291
-
-*color6: #7ab1b3
-*color14: #7ab1b3
-
-*color7: #b2bebf
-*color15: #b2bebf
+XTerm*foreground: FG
+XTerm*background: BG
+XTerm*cursorColor: FG
+XTerm*color0: BG
+XTerm*color1: RED
+XTerm*color2: GREEN
+XTerm*color3: YELLOW
+XTerm*color4: BLUE
+XTerm*color5: MAGENTA
+XTerm*color6: CYAN
+XTerm*color7: FG
+XTerm*color8: GREY
+XTerm*color9: RED
+XTerm*color10: GREEN
+XTerm*color11: YELLOW
+XTerm*color12: BLUE
+XTerm*color13: MAGENTA
+XTerm*color14: CYAN
+XTerm*color15: FG
