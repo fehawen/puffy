@@ -13,8 +13,8 @@ Xcursor.size: 64
 Xcursor.theme: default
 
 ! pixelsize is relative to screen resolution, size is relative to DPI.
-XTerm*faceName: xft:monospace:size=11
-*font: xft:monospace:size=11
+XTerm*faceName: xft:monospace:size=10
+*font: xft:monospace:size=10
 
 XTerm*termName: xterm-256color
 XTerm*geometry: 86x24

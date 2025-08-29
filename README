@@ -17,3 +17,4 @@ xenodm
 
     $ rcctl enable xenodm
     $ rcctl start xenodm
+    $ vi /etc/X11/xenodm/Xsetup_0
