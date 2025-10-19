@@ -1,6 +1,5 @@
 ! vim:ft=xdefaults:
 
-Xft.dpi: 192
 Xft.autohint: 0
 Xft.hinting: true
 Xft.hintstyle: hintslight
@@ -8,17 +7,16 @@ Xft.lcdfilter: lcddefault
 Xft.antialias: 1
 Xft.rgba: rgb
 
-! 16, 24, 32, 48, 64
-Xcursor.size: 64
 Xcursor.theme: default
 
 ! pixelsize is relative to screen resolution, size is relative to DPI.
-XTerm*faceName: xft:monospace:size=10
-*font: xft:monospace:size=10
+XTerm*faceName: xft:monospace:size=7
+*font: xft:monospace:size=7
 
+XTerm*scaleHeight: 1.4
 XTerm*termName: xterm-256color
-XTerm*geometry: 86x24
-XTerm*internalBorder: 60
+XTerm*geometry: 92x20
+XTerm*internalBorder: 40
 XTerm*borderWidth: 0
 XTerm*utf8: true
 XTerm*scrollBar: false
@@ -45,32 +43,22 @@ XTerm*on3Clicks: line
     Shift Ctrl <KeyPress> v: insert-selection(SELECT) \n\
     Shift <Btn1Down>: exec-formatted("xdg-open '%t'", SELECT)
 
-#define FG #b2bebf
-#define BG #1e282c
-#define GREY #566166
-#define RED #b56666
-#define GREEN #779687
-#define YELLOW #b98675
-#define BLUE #5e828f
-#define MAGENTA #b48291
-#define CYAN #7ab1b3
-
-XTerm*foreground: FG
-XTerm*background: BG
-XTerm*cursorColor: FG
-XTerm*color0: BG
-XTerm*color1: RED
-XTerm*color2: GREEN
-XTerm*color3: YELLOW
-XTerm*color4: BLUE
-XTerm*color5: MAGENTA
-XTerm*color6: CYAN
-XTerm*color7: FG
-XTerm*color8: GREY
-XTerm*color9: RED
-XTerm*color10: GREEN
-XTerm*color11: YELLOW
-XTerm*color12: BLUE
-XTerm*color13: MAGENTA
-XTerm*color14: CYAN
-XTerm*color15: FG
+XTerm*foreground: #9cb9de
+XTerm*background: #08090c
+XTerm*cursorColor: #9cb9de
+XTerm*color0: #0d1016
+XTerm*color8: #30445c
+XTerm*color1: #e24358
+XTerm*color9: #e24358
+XTerm*color2: #9cb9de
+XTerm*color10: #9cb9de
+XTerm*color3: #e24358
+XTerm*color11: #9cb9de
+XTerm*color4: #607ea0
+XTerm*color12: #607ea0
+XTerm*color5: #e24358
+XTerm*color13: #e24358
+XTerm*color6: #607ea0
+XTerm*color14: #607ea0
+XTerm*color7: #9cb9de
+XTerm*color15: #9cb9de

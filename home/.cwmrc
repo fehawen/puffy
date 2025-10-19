@@ -5,21 +5,21 @@ unbind-mouse all
 
 sticky yes
 
-fontname "monospace:pixelsize=30:antialias=true"
+fontname "monospace:size=7:antialias=true"
 
 gap 30 30 30 30
 
 moveamount 30
 
 borderwidth 2
-color activeborder "#b2bebf"
-color inactiveborder "#56616"
-color urgencyborder "#b56666"
-color menubg "#b98675"
-color menufg "#1e282c"
+color activeborder "#9cb9de"
+color inactiveborder "#30445c"
+color urgencyborder "#e24358"
+color menubg "#e24358"
+color menufg "#08090c"
 
-command browser ungoogled-chromium
-command terminal xterm
+command browser /usr/local/bin/ungoogled-chromium
+command terminal /usr/X11R6/bin/xterm
 
 bind-mouse 4-1 window-move
 bind-mouse 4S-1 window-resize
