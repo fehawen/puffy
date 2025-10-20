@@ -1,5 +1,3 @@
-# https://forum.puppylinux.com/viewtopic.php?t=6101
-
 unbind-key all
 unbind-mouse all
 
@@ -7,7 +5,7 @@ sticky yes
 
 fontname "monospace:size=7:antialias=true"
 
-gap 30 30 30 30
+gap 60 20 20 20
 
 moveamount 30
 
@@ -20,6 +18,8 @@ color menufg "#08090c"
 
 command browser /usr/local/bin/ungoogled-chromium
 command terminal /usr/X11R6/bin/xterm
+
+ignore conky
 
 bind-mouse 4-1 window-move
 bind-mouse 4S-1 window-resize

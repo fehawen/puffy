@@ -37,6 +37,7 @@ XTerm*bellIsUrgent: true
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 XTerm*on2Clicks: word
 XTerm*on3Clicks: line
+XTerm*highlightReverse: false
 
 *VT100*translations: #override \n\
     Shift Ctrl <KeyPress> c: copy-selection(SELECT) \n\
@@ -46,6 +47,8 @@ XTerm*on3Clicks: line
 XTerm*foreground: #9cb9de
 XTerm*background: #08090c
 XTerm*cursorColor: #9cb9de
+XTerm*highlightColor: #e24358
+XTerm*highlightTextColor: #08090c
 XTerm*color0: #0d1016
 XTerm*color8: #30445c
 XTerm*color1: #e24358
