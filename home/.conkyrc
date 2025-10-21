@@ -1,4 +1,3 @@
-
 alignment top_right
 background yes
 border_width 0
@@ -22,17 +21,22 @@ update_interval 10
 uppercase no
 
 TEXT
-${color}/////// \
-${color1}${exec sysctl -n hw.sensors.cpu0.temp0 | cut -d '.' -f 1}°C \
-${color}///////// \
+${alignr}${color}/////// \
 ${color1}${exec date "+%H:%M"} \
-${color}//////////// \
-${color1}${exec ifconfig iwm0 | egrep ieee80211 | awk '{print $3}'} \
-${color}/////////////////
-${voffset 7}${alignr}/////// \
-${color1}${memfree} \
 ${color}///////// \
+${color1}${memfree} \
+${color}/////////// \
 ${color1}${fs_free /home} \
+${color}///////////// \
+${color1}${exec ifconfig iwm0 | egrep ieee80211 | awk '{print $3}'} \
+${color}///////////////
+${voffset 7}${alignr}/////// \
+${color1}${if_match ${exec sndioctl -n output.mute} > 0}MUTE${else}\
+${exec sndioctl -n output.level | awk '{print int($0*100)}'}%${endif} \
+${color}///////// \
+${color1}${exec xbacklight -get | cut -d . -f 1}% \
 ${color}/////////// \
 ${color1}${apm_battery_life} \
-${color}//////////////   \
+${color}///////////// \
+${color1}${exec sysctl -n hw.sensors.cpu0.temp0 | cut -d '.' -f 1}°C \
+${color}///////////////    \
