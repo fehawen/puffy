@@ -1,0 +1,25 @@
+#!/bin/sh
+
+pkg="$1"
+files="+REQUIRING +REQUIRED_BY"
+
+[ "$pkg" ] || {
+    printf '%s: no argument provided\n' "${0##*/}"
+    exit
+}
+
+for found in /var/db/pkg/*"${pkg}"*; do
+    [ -d "$found" ] || continue
+
+    printf '%s\n' "${found##*/}"
+
+    for file in $files; do
+        if [ -f "${found}/${file}" ]; then
+            printf '\t%s\n' "$file"
+
+            while IFS= read -r dep || [ -n "$dep" ]; do
+                printf '\t\t%s\n' "$dep"
+            done < "${found}/${file}"
+        fi
+    done
+done
