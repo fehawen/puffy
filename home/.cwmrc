@@ -5,7 +5,7 @@ sticky yes
 
 fontname "monospace:size=7:antialias=true"
 
-gap 60 20 20 20
+gap 70 20 20 20
 
 moveamount 30
 

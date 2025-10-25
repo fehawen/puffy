@@ -30,7 +30,7 @@ ${color1}${fs_free /home} \
 ${color}///////////// \
 ${color1}${exec ifconfig iwm0 | egrep ieee80211 | awk '{print $3}'} \
 ${color}///////////////
-${voffset 7}${alignr}/////// \
+${voffset 4}${alignr}/////// \
 ${color1}${if_match ${exec sndioctl -n output.mute} > 0}MUTE${else}\
 ${exec sndioctl -n output.level | awk '{print int($0*100)}'}%${endif} \
 ${color}///////// \
