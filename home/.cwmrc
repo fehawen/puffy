@@ -19,8 +19,6 @@ color menufg "#08090c"
 command browser /usr/local/bin/ungoogled-chromium
 command terminal /usr/X11R6/bin/xterm
 
-ignore conky
-
 bind-mouse 4-1 window-move
 bind-mouse 4S-1 window-resize
 
