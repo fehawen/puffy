@@ -10,6 +10,7 @@ conky.config = {
     draw_shades = false,
     use_xft = true,
     font = 'monospace:size=7',
+    font1 = 'Font Awesome 7 Free:style=Solid:size=7',
     gap_x = 20,
     gap_y = 7,
     out_to_x = true,
@@ -23,22 +24,26 @@ conky.config = {
 
 conky.text = [[
 ${alignr}${color}/////// \
-${color1}${exec date "+%H:%M"} \
+${color1}${font1} ${font}${exec date "+%H:%M"} \
 ${color}///////// \
-${color1}${memfree} \
+${color1}${font1} ${font}${memfree} \
 ${color}/////////// \
-${color1}${fs_free /home} \
+${color1}${font1} ${font}${fs_free /home} \
 ${color}///////////// \
-${color1}${exec ifconfig iwm0 | egrep ieee80211 | awk '{print $3}'} \
+${color1}${font1} \
+${font}${exec ifconfig iwm0 | egrep ieee80211 | awk '{print $3}'} \
 ${color}///////////////
 ${voffset 4}${alignr}/////// \
-${color1}${if_match ${exec sndioctl -n output.mute} > 0}MUTE${else}\
+${color1}${font1}${if_match ${exec sndioctl -n output.mute} > 0}${font}\
+${else} ${font}\
 ${exec sndioctl -n output.level | awk '{print int($0*100)}'}%${endif} \
 ${color}///////// \
-${color1}${exec xbacklight -get | cut -d . -f 1}% \
+${color1}${font1} ${font}${exec xbacklight -get | cut -d . -f 1}% \
 ${color}/////////// \
-${color1}${apm_battery_life} \
+${color1}${font1}${if_match "${apm_adapter}" == "on-line"} ${else} ${endif}\
+${font}${apm_battery_life} \
 ${color}///////////// \
-${color1}${exec sysctl -n hw.sensors.cpu0.temp0 | cut -d '.' -f 1}°C \
+${color1}${font1} ${font}\
+${exec sysctl -n hw.sensors.cpu0.temp0 | cut -d '.' -f 1}°C \
 ${color}///////////////    \
 ]];
