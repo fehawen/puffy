@@ -20,8 +20,9 @@ XTerm*internalBorder: 40
 XTerm*borderWidth: 0
 XTerm*utf8: true
 XTerm*scrollBar: false
-XTerm*cursorBlink: true
+XTerm*cursorBlink: false
 XTerm*selectToClipboard: true
+XTerm*keepClipboard: true
 XTerm*trimSelection: true
 XTerm*renderFont: true
 XTerm*wideChars: true
@@ -39,29 +40,35 @@ XTerm*on2Clicks: word
 XTerm*on3Clicks: line
 XTerm*highlightReverse: false
 
-*VT100*translations: #override \n\
-    Shift Ctrl <KeyPress> c: copy-selection(SELECT) \n\
-    Shift Ctrl <KeyPress> v: insert-selection(SELECT) \n\
-    Shift <Btn1Down>: exec-formatted("xdg-open '%t'", SELECT)
+*VT100*translations: #override \
+    Shift Ctrl <KeyPress> c:copy-selection(SELECT) \n\
+    Shift Ctrl <KeyPress> v:insert-selection(SELECT)
 
-XTerm*foreground: #9cb9de
-XTerm*background: #08090c
-XTerm*cursorColor: #9cb9de
-XTerm*highlightColor: #e24358
-XTerm*highlightTextColor: #08090c
-XTerm*color0: #0d1016
-XTerm*color8: #30445c
-XTerm*color1: #e24358
-XTerm*color9: #e24358
-XTerm*color2: #9cb9de
-XTerm*color10: #9cb9de
-XTerm*color3: #e24358
-XTerm*color11: #9cb9de
-XTerm*color4: #607ea0
-XTerm*color12: #607ea0
-XTerm*color5: #e24358
-XTerm*color13: #e24358
-XTerm*color6: #607ea0
-XTerm*color14: #607ea0
-XTerm*color7: #9cb9de
-XTerm*color15: #9cb9de
+#define FG #9cb9de
+#define BG #08090c
+#define RED #e24358
+#define GREY #607ea0
+#define COMMENT #30445c
+#define SHADE #0d1016
+
+XTerm*foreground: FG
+XTerm*background: BG
+XTerm*cursorColor: FG
+XTerm*highlightColor: RED
+XTerm*highlightTextColor: BG
+XTerm*color0: SHADE
+XTerm*color8: COMMENT
+XTerm*color1: RED
+XTerm*color9: RED
+XTerm*color2: FG
+XTerm*color10: FG
+XTerm*color3: RED
+XTerm*color11: FG
+XTerm*color4: GREY
+XTerm*color12: GREY
+XTerm*color5: RED
+XTerm*color13: RED
+XTerm*color6: GREY
+XTerm*color14: GREY
+XTerm*color7: FG
+XTerm*color15: FG
