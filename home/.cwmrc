@@ -5,7 +5,7 @@ sticky yes
 
 fontname "monospace:size=7:antialias=true"
 
-gap 70 20 20 20
+gap 65 20 20 20
 
 moveamount 30
 
@@ -27,6 +27,7 @@ bind-key 4-m window-maximize
 bind-key 4-f window-fullscreen
 bind-key 4S-q window-close
 bind-key 4CS-r restart
+bind-key 4CS-s /home/fehawen/bin/xmon
 bind-key 4CS-x quit
 bind-key 4-d menu-cmd
 bind-key 4S-d menu-window

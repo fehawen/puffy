@@ -1,0 +1,33 @@
+#!/bin/sh
+
+a="$(xrandr | grep -w "connected" | awk '{if(NR>0)print $1}' | head -n 1)"
+b="$(xrandr | grep -w "connected" | awk '{if(NR>1)print $1}' | head -n 1)"
+c="$(xrandr | grep -w "connected" | awk '{if(NR>2)print $1}' | head -n 1)"
+
+args=""
+
+if [ -z "$1" ]; then
+    args="--output $a --auto --primary"
+    [ -n "$b" ] && args="$args --output $b --off"
+    [ -n "$c" ] && args="$args --output $c --off"
+else
+    [ -n "$b" ] && args="--output $b --auto --primary"
+
+    if [ -n "$c" ] && [ -n "$args" ]; then
+        args="$args --output $c --auto --below $b"
+    elif [ -n "$c" ]; then
+        args="--output $c --auto --primary"
+    fi
+
+    [ -n "$args" ] && args="$args --output $a --off"
+fi
+
+[ -n "$args" ] && {
+    pkill conky
+    # shellcheck disable=2086
+    xrandr $args
+    sleep 2
+    conky -qd
+
+    printf 'Ran xrandr with args: %s\n' "$args"
+}
