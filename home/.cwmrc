@@ -3,9 +3,9 @@ unbind-mouse all
 
 sticky yes
 
-fontname "monospace:size=7:antialias=true"
+fontname "monospace:size=6:antialias=true"
 
-gap 65 20 20 20
+gap 60 20 20 20
 
 moveamount 30
 

@@ -9,8 +9,7 @@ conky.config = {
     draw_outline = false,
     draw_shades = false,
     use_xft = true,
-    font = 'monospace:size=7',
-    font1 = 'Font Awesome 7 Free:style=Solid:size=7',
+    font = 'monospace:size=6',
     gap_x = 20,
     gap_y = 4,
     out_to_x = true,
@@ -24,26 +23,22 @@ conky.config = {
 
 conky.text = [[
 ${color}/////// \
-${color1}${font1} ${font}${exec date "+%H:%M"} \
+${color1}${exec date "+%H:%M"} \
 ${color}///////// \
-${color1}${font1} ${font}${memfree} \
+${color1}${memfree} \
 ${color}/////////// \
-${color1}${font1} ${font}${fs_free /home} \
+${color1}${fs_free /home} \
 ${color}///////////// \
-${color1}${font1} \
-${font}${exec ifconfig iwm0 | egrep ieee80211 | awk '{print $3}'} \
+${color1}${exec ifconfig iwm0 | egrep ieee80211 | awk '{print $3}'} \
 ${color}///////////////
-${alignr}/////// \
-${color1}${font1}${if_match ${exec sndioctl -n output.mute} > 0}${font}\
-${else} ${font}\
-${exec sndioctl -n output.level | awk '{print int($0*100)}'}%${endif} \
+${voffset 3}${alignr}/////// \
+${color1}${if_match ${exec sndioctl -n output.mute} > 0}OFF\
+${else}${exec sndioctl -n output.level | awk '{print int($0*100)}'}%${endif} \
 ${color}///////// \
-${color1}${font1} ${font}${exec xbacklight -get | cut -d . -f 1}% \
+${color1}${exec xbacklight -get | cut -d . -f 1}% \
 ${color}/////////// \
-${color1}${font1}${if_match ${exec apm -a} == 1} ${else} ${endif}\
-${font}${exec apm -l}% \
+${color1}${exec apm -l}% \
 ${color}///////////// \
-${color1}${font1} ${font}\
-${exec sysctl -n hw.sensors.cpu0.temp0 | cut -d '.' -f 1}°C \
-${color}///////////////    \
+${color1}${exec sysctl -n hw.sensors.cpu0.temp0 | cut -d '.' -f 1}°C \
+${color}///////////////   \
 ]];
