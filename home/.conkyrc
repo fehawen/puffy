@@ -29,7 +29,9 @@ ${color1}${memfree} \
 ${color}/////////// \
 ${color1}${fs_free /home} \
 ${color}///////////// \
-${color1}${exec ifconfig iwm0 | egrep ieee80211 | awk '{print $3}'} \
+${color1}${if_match "${exec ifconfig iwm0 | grep status | awk '{print $2}'}" == "active"}\
+${exec ifconfig iwm0 | grep ieee80211 | awk '{print $3}'}\
+${else}N/A${endif} \
 ${color}///////////////
 ${voffset 3}${alignr}/////// \
 ${color1}${if_match ${exec sndioctl -n output.mute} > 0}OFF\
