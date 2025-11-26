@@ -17,7 +17,7 @@ conky.config = {
     own_window_class = 'Conky',
     own_window_type = 'override',
     own_window_colour = '#08090c',
-    update_interval = 10,
+    update_interval = 3,
     uppercase = false,
 }
 
