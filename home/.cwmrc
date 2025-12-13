@@ -5,16 +5,16 @@ sticky yes
 
 fontname "monospace:size=6:antialias=true"
 
-gap 60 20 20 20
+gap 50 50 30 30
 
 moveamount 30
 
-borderwidth 2
-color activeborder "#9cb9de"
-color inactiveborder "#30445c"
-color urgencyborder "#e24358"
-color menubg "#e24358"
-color menufg "#08090c"
+borderwidth 1
+color activeborder "#24292e"
+color inactiveborder "#969696"
+color urgencyborder "#d73a49"
+color menubg "#ffffff"
+color menufg "#24292e"
 
 command browser /usr/local/bin/ungoogled-chromium
 command terminal /usr/X11R6/bin/xterm

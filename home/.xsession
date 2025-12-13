@@ -5,6 +5,7 @@ export ENV=~/.kshrc
 
 xset b off
 xset r rate 250 50
+xset +fp ~/.fonts
 
 # touchpad - Accel Constant Deceleration
 xinput set-float-prop /dev/wsmouse0 300 0.4
@@ -12,7 +13,7 @@ xinput set-float-prop /dev/wsmouse0 300 0.4
 xinput set-float-prop /dev/wsmouse0 302 1.5
 
 xrdb -DHOME="$HOME" < ~/.Xresources
-xsetroot -solid "#08090c"
+xsetroot -solid "#babbbd"
 
 conky -qd -c ~/.conkyrc &
 
