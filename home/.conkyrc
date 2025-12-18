@@ -21,7 +21,7 @@ conky.config = {
 
 conky.text = [[
 ${time %H:%M} │ \
-${time %a %d %B} │ \
+${time %a %d %b} │ \
 ${if_match "${exec ifconfig iwm0 | grep status | awk '{print $2}'}" == "active"}\
 ${exec ifconfig iwm0 | grep ieee80211 | awk '{print $3}'}\
 ${else}N/A${endif} │ \

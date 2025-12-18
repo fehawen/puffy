@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/ksh
 
 export LANG=en_US.UTF-8
 export ENV=~/.kshrc

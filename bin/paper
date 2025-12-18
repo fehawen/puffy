@@ -1,0 +1,14 @@
+#!/bin/ksh
+
+if [ -d ~/wallpapers ]; then
+    set -- ~/wallpapers/*
+
+    if [ "$#" -eq 0 ]; then
+        xsetroot -solid "#babbbd"
+    else
+        (( i = RANDOM % $# + 1 ))
+        eval "exec xwallpaper --center \"\${$i}\""
+    fi
+else
+    xsetroot -solid "#babbbd"
+fi
