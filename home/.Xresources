@@ -10,13 +10,13 @@ Xft.rgba: rgb
 Xcursor.theme: default
 
 ! pixelsize is relative to screen resolution, size is relative to DPI.
-XTerm*faceName: xft:monospace:size=6
-*font: xft:monospace:size=6
+XTerm*faceName: xft:monospace:size=7
+*font: xft:monospace:size=7
 
 XTerm*scaleHeight: 1.2
 XTerm*termName: xterm-256color
-XTerm*geometry: 92x20
-XTerm*internalBorder: 30
+XTerm*geometry: 90x20
+XTerm*internalBorder: 50
 XTerm*borderWidth: 0
 XTerm*utf8: true
 XTerm*scrollBar: false
@@ -44,31 +44,31 @@ XTerm*highlightReverse: false
     Shift Ctrl <KeyPress> c:copy-selection(SELECT) \n\
     Shift Ctrl <KeyPress> v:insert-selection(SELECT)
 
-#define FG #9cb9de
-#define BG #08090c
-#define RED #e24358
-#define GREY #607ea0
-#define COMMENT #30445c
-#define SHADE #0d1016
+XTerm*foreground: #b2bebf
+XTerm*background: #1e282c
 
-XTerm*foreground: FG
-XTerm*background: BG
-XTerm*cursorColor: FG
-XTerm*highlightColor: RED
-XTerm*highlightTextColor: BG
-XTerm*color0: SHADE
-XTerm*color8: COMMENT
-XTerm*color1: RED
-XTerm*color9: RED
-XTerm*color2: FG
-XTerm*color10: FG
-XTerm*color3: RED
-XTerm*color11: FG
-XTerm*color4: GREY
-XTerm*color12: GREY
-XTerm*color5: RED
-XTerm*color13: RED
-XTerm*color6: GREY
-XTerm*color14: GREY
-XTerm*color7: FG
-XTerm*color15: FG
+XTerm*cursorColor: #b2bebf
+
+XTerm*color0: #242e32
+XTerm*color8: #566166
+
+XTerm*color1: #b56666
+XTerm*color9: #b56666
+
+XTerm*color2: #779687
+XTerm*color10: #779687
+
+XTerm*color3: #b98675
+XTerm*color11: #b98675
+
+XTerm*color4: #5e828f
+XTerm*color12: #5e828f
+
+XTerm*color5: #b48291
+XTerm*color13: #b48291
+
+XTerm*color6: #7ab1b3
+XTerm*color14: #7ab1b3
+
+XTerm*color7: #b2bebf
+XTerm*color15: #b2bebf
