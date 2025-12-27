@@ -13,7 +13,12 @@ xinput set-float-prop /dev/wsmouse0 300 0.4
 xinput set-float-prop /dev/wsmouse0 302 1.5
 
 xrdb -DHOME="$HOME" < ~/.Xresources
-xsetroot -solid "#babbbd"
+
+if [ -x ~/bin/paper ]; then
+    ~/bin/paper
+else
+    xsetroot -solid "#babbbd"
+fi
 
 conky -qd -c ~/.conkyrc &
 
