@@ -3,7 +3,7 @@ unbind-mouse all
 
 sticky yes
 
-fontname "monospace:size=7:antialias=true"
+fontname "monospace:size=6:antialias=true"
 
 gap 30 50 30 30
 

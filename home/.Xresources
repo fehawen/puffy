@@ -10,13 +10,13 @@ Xft.rgba: rgb
 Xcursor.theme: default
 
 ! pixelsize is relative to screen resolution, size is relative to DPI.
-XTerm*faceName: xft:monospace:size=7
-*font: xft:monospace:size=7
+XTerm*faceName: xft:monospace:size=6
+*font: xft:monospace:size=6
 
 XTerm*scaleHeight: 1.2
 XTerm*termName: xterm-256color
-XTerm*geometry: 90x20
-XTerm*internalBorder: 50
+XTerm*geometry: 92x16
+XTerm*internalBorder: 40
 XTerm*borderWidth: 0
 XTerm*utf8: true
 XTerm*scrollBar: false

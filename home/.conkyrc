@@ -8,7 +8,7 @@ conky.config = {
     draw_outline = false,
     draw_shades = false,
     use_xft = true,
-    font = 'monospace:size=7',
+    font = 'monospace:size=6',
     gap_x = 15,
     gap_y = 10,
     out_to_x = true,
