@@ -9,9 +9,9 @@ gap 30 50 30 30
 
 moveamount 30
 
-borderwidth 3
-color activeborder "#2d383c"
-color inactiveborder "#263034"
+borderwidth 1
+color activeborder "#b2bebf"
+color inactiveborder "#566166"
 color urgencyborder "#b56666"
 color menubg "#5e828f"
 color menufg "#1e282c"
