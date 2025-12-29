@@ -44,31 +44,33 @@ XTerm*highlightReverse: false
     Shift Ctrl <KeyPress> c:copy-selection(SELECT) \n\
     Shift Ctrl <KeyPress> v:insert-selection(SELECT)
 
-XTerm*foreground: #b2bebf
-XTerm*background: #1e282c
+XTerm*foreground: #afd7d7
+XTerm*background: #020307
 
-XTerm*cursorColor: #b2bebf
+XTerm*cursorColor: #008888
 
-XTerm*color0: #242e32
-XTerm*color8: #566166
+XTerm*color0: #111214
+XTerm*color8: #3c3835
 
-XTerm*color1: #b56666
-XTerm*color9: #b56666
+XTerm*color1: #d15e85
+XTerm*color9: #d15e85
 
-XTerm*color2: #779687
-XTerm*color10: #779687
+XTerm*color2: #008888
+XTerm*color10: #008888
 
-XTerm*color3: #b98675
-XTerm*color11: #b98675
+XTerm*color3: #a1a6a9
+XTerm*color11: #a1a6a9
 
-XTerm*color4: #5e828f
-XTerm*color12: #5e828f
+XTerm*color4: #6087b0
+XTerm*color12: #6087b0
+! XTerm*color12: #8887af
 
-XTerm*color5: #b48291
-XTerm*color13: #b48291
+XTerm*color5: #ae5fb0
+XTerm*color13: #ae5fb0
+! XTerm*color13: #515487
 
-XTerm*color6: #7ab1b3
-XTerm*color14: #7ab1b3
+XTerm*color6: #5fafae
+XTerm*color14: #5fafae
 
-XTerm*color7: #b2bebf
-XTerm*color15: #b2bebf
+XTerm*color7: #afd7d7
+XTerm*color15: #afd7d7
