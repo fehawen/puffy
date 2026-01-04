@@ -14,7 +14,7 @@ conky.config = {
     draw_outline = false,
     draw_shades = false,
     use_xft = true,
-    font = 'monospace:size=6',
+    font = 'JetBrains Mono:pixelsize=15',
     gap_x = 15,
     gap_y = 5,
     out_to_x = true,

@@ -3,7 +3,7 @@ unbind-mouse all
 
 sticky yes
 
-fontname "monospace:size=6:antialias=true"
+fontname "JetBrains Mono:pixelsize=15:antialias=true"
 
 gap 40 10 10 10
 
@@ -16,8 +16,10 @@ color urgencyborder "#d15e85"
 color menubg "#008888"
 color menufg "#020307"
 
-command browser /usr/local/bin/ungoogled-chromium
+command firefox /usr/local/bin/firefox-esr
+command chromium /usr/local/bin/ungoogled-chromium
 command terminal /usr/X11R6/bin/xterm
+command zap /usr/local/bin/zaproxy
 
 bind-mouse 4-1 window-move
 bind-mouse 4S-1 window-resize

@@ -1,5 +1,76 @@
 ! vim:ft=xdefaults
 
+! -----------------------------
+! Font configuration
+! -----------------------------
+XTerm*renderFont: true
+XTerm*faceName: JetBrains Mono:pixelsize=15
+XTerm*faceSize: 8
+XTerm*scaleHeight: 1.2
+
+! -----------------------------
+! UTF-8 and locale
+! -----------------------------
+XTerm*utf8: true
+XTerm*locale: true
+
+! -----------------------------
+! Cursor & selection
+! -----------------------------
+XTerm*cursorBlink: false
+XTerm*cursorColor: #008888
+XTerm*selectToClipboard: true
+XTerm*keepClipboard: true
+XTerm*trimSelection: true
+
+! Enable Shift+Ctrl C/V for clipboard
+*VT100*translations: #override \
+    Shift Ctrl <KeyPress> c:copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <KeyPress> v:insert-selection(CLIPBOARD)
+
+! -----------------------------
+! Scrollback
+! -----------------------------
+XTerm*scrollBar: false
+XTerm*scrollKey: false
+XTerm*saveLines: 10000
+
+! -----------------------------
+! Appearance
+! -----------------------------
+XTerm*foreground: #afd7d7
+XTerm*background: #020307
+XTerm*wideChars: true
+XTerm*allowBoldFonts: false
+XTerm*internalBorder: 40
+XTerm*borderWidth: 0
+XTerm*visualBell: false
+XTerm*bellIsUrgent: true
+XTerm*geometry: 100x20
+
+! -----------------------------
+! Colors
+! -----------------------------
+XTerm*color0: #111214
+XTerm*color8: #3c3835
+XTerm*color1: #d15e85
+XTerm*color9: #d15e85
+XTerm*color2: #008888
+XTerm*color10: #008888
+XTerm*color3: #a1a6a9
+XTerm*color11: #a1a6a9
+XTerm*color4: #6087b0
+XTerm*color12: #6087b0
+XTerm*color5: #ae5fb0
+XTerm*color13: #ae5fb0
+XTerm*color6: #5fafae
+XTerm*color14: #5fafae
+XTerm*color7: #afd7d7
+XTerm*color15: #afd7d7
+
+! -----------------------------
+! Xft font rendering hints
+! -----------------------------
 Xft.autohint: 0
 Xft.hinting: true
 Xft.hintstyle: hintslight
@@ -7,70 +78,18 @@ Xft.lcdfilter: lcddefault
 Xft.antialias: 1
 Xft.rgba: rgb
 
-Xcursor.theme: default
-
-! pixelsize is relative to screen resolution, size is relative to DPI.
-XTerm*faceName: xft:monospace:size=6
-*font: xft:monospace:size=6
-
-XTerm*scaleHeight: 1.2
-XTerm*termName: xterm-256color
-XTerm*geometry: 92x16
-XTerm*internalBorder: 40
-XTerm*borderWidth: 0
-XTerm*utf8: true
-XTerm*scrollBar: false
-XTerm*cursorBlink: false
-XTerm*selectToClipboard: true
-XTerm*keepClipboard: true
-XTerm*trimSelection: true
-XTerm*renderFont: true
-XTerm*wideChars: true
-XTerm*visualBell: false
-XTerm*allowBoldFonts: false
-XTerm*scrollKey: true
-XTerm*fullscreen: never
+! -----------------------------
+! Cursor & mouse behavior
+! -----------------------------
+XTerm*on2Clicks: word
+XTerm*on3Clicks: line
 XTerm*cutToBeginningOfLine: false
 XTerm*cutNewline: false
 XTerm*metaSendsEscape: true
-XTerm*saveLines: 10000
-XTerm*bellIsUrgent: true
+
+! -----------------------------
+! Optional terminal behavior
+! -----------------------------
+XTerm*termName: xterm-256color
+XTerm*fullscreen: never
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-XTerm*on2Clicks: word
-XTerm*on3Clicks: line
-XTerm*highlightReverse: false
-
-*VT100*translations: #override \
-    Shift Ctrl <KeyPress> c:copy-selection(SELECT) \n\
-    Shift Ctrl <KeyPress> v:insert-selection(SELECT)
-
-XTerm*foreground: #afd7d7
-XTerm*background: #020307
-
-XTerm*cursorColor: #008888
-
-XTerm*color0: #111214
-XTerm*color8: #3c3835
-
-XTerm*color1: #d15e85
-XTerm*color9: #d15e85
-
-XTerm*color2: #008888
-XTerm*color10: #008888
-
-XTerm*color3: #a1a6a9
-XTerm*color11: #a1a6a9
-
-XTerm*color4: #6087b0
-XTerm*color12: #6087b0
-! XTerm*color12: #8887af
-
-XTerm*color5: #ae5fb0
-XTerm*color13: #ae5fb0
-! XTerm*color13: #515487
-
-XTerm*color6: #5fafae
-XTerm*color14: #5fafae
-
-XTerm*color7: #afd7d7
-XTerm*color15: #afd7d7
