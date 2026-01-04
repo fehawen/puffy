@@ -1,0 +1,31 @@
+#!/bin/ksh
+#
+# DPI info per monitor
+#
+
+# Get X server DPI
+XSERVER_DPI=$(xdpyinfo | awk '/resolution:/ {print $2}')
+
+for MON in $(xrandr --query | awk '/ connected/ {print $1}'); do
+    # Get resolution
+    RES=$(xrandr | awk -v mon="$MON" '$1==mon && $2=="connected" {print $3}' | sed 's/+.*//')
+
+    # Split RES into width and height without echo
+    PIX_W=${RES%x*} # everything before 'x'
+    PIX_H=${RES#*x} # everything after 'x'
+
+    # Try physical size
+    PHY_W_MM=$(xrandr --verbose | awk -v mon="$MON" '$1==mon {flag=1} flag && /mm/ {print $1; exit}')
+    PHY_H_MM=$(xrandr --verbose | awk -v mon="$MON" '$1==mon {flag=1} flag && /mm/ {print $2; exit}')
+
+    if [ -n "$PHY_W_MM" ] && [ "$PHY_W_MM" -gt 0 ]; then
+        PHY_W_IN=$(printf "%.6f" "$(bc -l <<< "$PHY_W_MM / 25.4")")
+        PHY_H_IN=$(printf "%.6f" "$(bc -l <<< "$PHY_H_MM / 25.4")")
+        DPI_X=$(bc -l <<< "$PIX_W / $PHY_W_IN")
+        DPI_Y=$(bc -l <<< "$PIX_H / $PHY_H_IN")
+        DPI=$(bc -l <<< "($DPI_X + $DPI_Y)/2")
+        printf "%s: Computed DPI = %.1f, X server DPI = %s\n" "$MON" "$DPI" "$XSERVER_DPI"
+    else
+        printf "%s: Computed DPI unknown, X server DPI = %s\n" "$MON" "$XSERVER_DPI"
+    fi
+done

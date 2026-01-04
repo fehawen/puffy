@@ -1,0 +1,15 @@
+#!/bin/ksh
+
+file="$1"
+
+[ -n "$file" ] || {
+    printf 'File not specified.\n'
+    exit
+}
+
+[ -r "$file" ] || {
+    printf 'File not readable: %s\n' "$file"
+    exit
+}
+
+xclip -selection clipboard < "$file"
