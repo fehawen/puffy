@@ -122,3 +122,11 @@ sysctl.conf
 
         # For IPV6.
         net.inet6.ip6.ifq.maxlen=4096
+
+burp
+
+    Download JAR v 1.7.36
+        https://portswigger.net/burp/releases/professional-community-1-7-36
+
+    Include jdk-1.8.0 in path
+        /usr/local/jdk-1.8.0/bin/

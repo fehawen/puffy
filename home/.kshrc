@@ -9,6 +9,7 @@ TERM=xterm-256color
 
 PATH=~/bin:/bin:/sbin:/usr/bin:/usr/sbin
 PATH=$PATH:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin
+PATH=$PATH:/usr/local/jdk-1.8.0/bin/
 
 export VISUAL EDITOR TERMINAL BROWSER PATH
 
