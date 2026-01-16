@@ -1,33 +1,27 @@
 #!/bin/ksh
 
-a="$(xrandr | grep -w "connected" | awk '{if(NR>0)print $1}' | head -n 1)"
-b="$(xrandr | grep -w "connected" | awk '{if(NR>1)print $1}' | head -n 1)"
-c="$(xrandr | grep -w "connected" | awk '{if(NR>2)print $1}' | head -n 1)"
+internal=$(xrandr | grep -w "connected" | awk '{if(NR>0)print $1}' | head -n 1)
+external=$(xrandr | grep -w "connected" | awk '{if(NR>1)print $1}' | head -n 1)
+internal_active=$(xrandr --listactivemonitors | grep "$internal")
 
 args=""
 
-if [ -z "$1" ]; then
-    args="--output $a --auto --primary"
-    [ -n "$b" ] && args="$args --output $b --off"
-    [ -n "$c" ] && args="$args --output $c --off"
+if [ -z "$internal_active" ]; then
+    args="--output $internal --auto --primary"
+    [ -n "$external" ] && args="$args --output $external --off"
 else
-    [ -n "$b" ] && args="--output $b --auto --primary"
-
-    if [ -n "$c" ] && [ -n "$args" ]; then
-        args="$args --output $c --auto --below $b"
-    elif [ -n "$c" ]; then
-        args="--output $c --auto --primary"
-    fi
-
-    [ -n "$args" ] && args="$args --output $a --off"
+    [ -n "$external" ] && args="--output $external --auto --primary"
+    [ -n "$args" ] && args="$args --output $internal --off"
 fi
 
 [ -n "$args" ] && {
     pkill conky
+
+    while [ "$(pgrep conky | wc -l)" -ne 0 ]; do
+        sleep 0.5
+    done
+
     # shellcheck disable=2086
     xrandr $args
-    sleep 2
     conky -qd
-
-    printf 'Ran xrandr with args: %s\n' "$args"
 }

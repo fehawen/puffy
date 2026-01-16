@@ -1,0 +1,6 @@
+#!/bin/sh
+
+/usr/local/jdk-1.8.0/bin/java \
+    -jar \
+    /usr/local/bin/burpsuite_community_v1.7.36.jar \
+    &

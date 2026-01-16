@@ -19,6 +19,8 @@ xenodm
     $ doas rcctl start xenodm
     $ doas vi /etc/X11/xenodm/Xsetup_0
 
+        /usr/X11R6/bin/xsetroot -solid "#090909"
+
 login class
 
     $ doas usermod -L staff USERNAME

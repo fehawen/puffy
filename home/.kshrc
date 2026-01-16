@@ -1,17 +1,17 @@
 . /etc/ksh.kshrc
 
-VISUAL=vim
-EDITOR=$VISUAL
-TERMINAL=xterm
-BROWSER=ungoogled-chromium
-# TERM=xterm-16color
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export VISUAL=vim
+export EDITOR=$VISUAL
+export TERMINAL=xterm
+export BROWSER=firefox-esr
 TERM=xterm-256color
 
 PATH=~/bin:/bin:/sbin:/usr/bin:/usr/sbin
 PATH=$PATH:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin
 PATH=$PATH:/usr/local/jdk-1.8.0/bin/
-
-export VISUAL EDITOR TERMINAL BROWSER PATH
+export PATH
 
 HISTCONTROL=ignoredups
 HISTFILE=~/.ksh_history
