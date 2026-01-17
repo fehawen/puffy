@@ -16,16 +16,18 @@ color urgencyborder "#d15e85"
 color menubg "#008888"
 color menufg "#020307"
 
-command firefox /usr/local/bin/firefox-esr
-command chromium /usr/local/bin/ungoogled-chromium
-command xterm /usr/X11R6/bin/xterm
-command zap /usr/local/bin/zaproxy
-command xmon /home/fehawen/bin/xmon
+command "firefox" "/usr/local/bin/firefox-esr"
+command "chromium" "/usr/local/bin/ungoogled-chromium"
+command "urxvtc" "/usr/local/bin/urxvtc"
+command "xterm" "/usr/X11R6/bin/xterm"
+command "zap" "/usr/local/bin/zaproxy"
+command "xmon" "/home/fehawen/bin/xmon"
+command "suspend" "/usr/sbin/zzz"
 
 bind-mouse 4-1 window-move
 bind-mouse 4S-1 window-resize
 
-bind-key 4-Return xterm
+bind-key 4-Return urxvtc
 
 bind-key 4S-q window-close
 

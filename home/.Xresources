@@ -20,7 +20,7 @@ XTerm*trimSelection: true
 XTerm*renderFont: true
 XTerm*wideChars: true
 XTerm*visualBell: false
-XTerm*saveLines: 8192
+XTerm*saveLines: 20000
 XTerm*pointerMode: 2
 
 XTerm.VT100.translations: #override \n\
@@ -31,31 +31,88 @@ XTerm.VT100.translations: #override \n\
 Xft.dpi: 192
 Xcursor.size: 48
 XTerm*faceName: xft:JetBrains Mono:pixelsize=28
-*.font: xft:JetBrains Mono:pixelsize=28
+URxvt.font: xft:JetBrains Mono:pixelsize=28
+URxvt.boldFont: xft:JetBrains Mono:weight=bold:pixelsize=28
 #else
 Xcursor.size: 24
 XTerm*faceName: xft:JetBrains Mono:pixelsize=14
-*.font: xft:JetBrains Mono:pixelsize=14
+URxvt.font: xft:JetBrains Mono:pixelsize=14
+URxvt.boldFont: xft:JetBrains Mono:weight=bold:pixelsize=14
 #endif
 
-XTerm*foreground: #afd7d7
-XTerm*background: #020307
+URxvt.termName: xterm-256color
+URxvt.loginShell: true
+URxvt.utmpInhibit: true
+URxvt.scrollBar: false
+URxvt.secondaryScroll: true
+URxvt.cursorUnderline: false
+URxvt.letterSpace: -1
+URxvt.cursorBlink: false
+URxvt.urgentOnBell: false
+URxvt.internalBorder: 40
+URxvt.geometry: 100x20
+URxvt.saveLines: 20000
 
-XTerm*cursorColor: #008888
+URxvt.perl-ext-common: default,matcher,searchable-scrollback
 
-XTerm*color0: #111214
-XTerm*color8: #3c3835
-XTerm*color1: #d15e85
-XTerm*color9: #d15e85
-XTerm*color2: #008888
-XTerm*color10: #008888
-XTerm*color3: #a1a6a9
-XTerm*color11: #a1a6a9
-XTerm*color4: #6087b0
-XTerm*color12: #6087b0
-XTerm*color5: #ae5fb0
-XTerm*color13: #ae5fb0
-XTerm*color6: #5fafae
-XTerm*color14: #5fafae
-XTerm*color7: #afd7d7
-XTerm*color15: #afd7d7
+URxvt.selectToClipboard: true
+URxvt.cutchars: "`\"'&()*,;<=>?@[]^{|}.:/-"
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.C-M-c: builtin-string:
+URxvt.keysym.C-M-v: builtin-string:
+
+URxvt.url-launcher: /usr/local/bin/firefox-esr
+URxvt.matcher.button: C-1
+URxvt.matcher.rend.0: Uline
+
+#define FG #afd7d7
+#define BG #020307
+#define BLACK #111214
+#define GREY #3c3835
+#define RED #d15e85
+#define GREEN #008888
+#define YELLOW #a1a6a9
+#define BLUE #6087b0
+#define MAGENTA #ae5fb0
+#define CYAN #5fafae
+
+XTerm*foreground: FG
+XTerm*background: BG
+XTerm*cursorColor: GREEN
+XTerm*color0: BLACK
+XTerm*color8: GREY
+XTerm*color1: RED
+XTerm*color9: RED
+XTerm*color2: GREEN
+XTerm*color10: GREEN
+XTerm*color3: YELLOW
+XTerm*color11: YELLOW
+XTerm*color4: BLUE
+XTerm*color12: BLUE
+XTerm*color5: MAGENTA
+XTerm*color13: MAGENTA
+XTerm*color6: CYAN
+XTerm*color14: CYAN
+XTerm*color7: FG
+XTerm*color15: FG
+
+URxvt.foreground: FG
+URxvt.background: BG
+URxvt.cursorColor: GREEN
+URxvt.color0: BLACK
+URxvt.color8: GREY
+URxvt.color1: RED
+URxvt.color9: RED
+URxvt.color2: GREEN
+URxvt.color10: GREEN
+URxvt.color3: YELLOW
+URxvt.color11: YELLOW
+URxvt.color4: BLUE
+URxvt.color12: BLUE
+URxvt.color5: MAGENTA
+URxvt.color13: MAGENTA
+URxvt.color6: CYAN
+URxvt.color14: CYAN
+URxvt.color7: FG
+URxvt.color15: FG

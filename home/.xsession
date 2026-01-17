@@ -2,6 +2,8 @@
 
 export ENV=~/.kshrc
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 export MOZ_USE_XINPUT2=1
 export MOZ_ACCELERATED=1
@@ -12,6 +14,8 @@ xset r rate 250 50
 
 xinput set-float-prop /dev/wsmouse0 300 0.4
 xinput set-float-prop /dev/wsmouse0 302 1.5
+
+urxvtd -q -o -f &
 
 SW=$(xrandr 2>&1 | grep "Screen 0: minimum" | sed -e 's/.*, current //' -e 's/ x.*//')
 if [ "${SW}" -eq 3200 ]; then
