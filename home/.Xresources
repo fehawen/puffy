@@ -20,7 +20,7 @@ XTerm*trimSelection: true
 XTerm*renderFont: true
 XTerm*wideChars: true
 XTerm*visualBell: false
-XTerm*saveLines: 20000
+XTerm*saveLines: 10000
 XTerm*pointerMode: 2
 
 XTerm.VT100.translations: #override \n\
@@ -40,21 +40,31 @@ URxvt.font: xft:JetBrains Mono:pixelsize=14
 URxvt.boldFont: xft:JetBrains Mono:weight=bold:pixelsize=14
 #endif
 
-URxvt.termName: xterm-256color
-URxvt.loginShell: true
-URxvt.utmpInhibit: true
-URxvt.scrollBar: false
-URxvt.secondaryScroll: true
-URxvt.cursorUnderline: false
 URxvt.letterSpace: -1
-URxvt.cursorBlink: false
-URxvt.urgentOnBell: false
 URxvt.internalBorder: 40
 URxvt.geometry: 100x20
-URxvt.saveLines: 20000
 
-URxvt.perl-ext-common: default,matcher,searchable-scrollback
+URxvt.perl-ext-common: default,matcher,searchable-scrollback,-confirm-paste
 URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.termName: rxvt-unicode-256color
+URxvt.loginShell: true
+URxvt.utmpInhibit: true
+URxvt.buffered: true
+
+URxvt.cursorUnderline: false
+URxvt.cursorBlink: false
+URxvt.pointerBlank: true
+URxvt.urgentOnBell: false
+
+URxvt.saveLines: 10000
+URxvt.scrollBar: false
+URxvt.secondaryScroll: true
+URxvt.jumpScroll: true
+URxvt.skipScroll: false
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
 
 URxvt.selectToClipboard: true
 URxvt.cutchars: "`\"'&()*,;<=>?@[]^{|}.:/-"
