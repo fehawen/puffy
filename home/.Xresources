@@ -54,6 +54,7 @@ URxvt.geometry: 100x20
 URxvt.saveLines: 20000
 
 URxvt.perl-ext-common: default,matcher,searchable-scrollback
+URxvt.iso14755: false
 
 URxvt.selectToClipboard: true
 URxvt.cutchars: "`\"'&()*,;<=>?@[]^{|}.:/-"
