@@ -19,7 +19,7 @@ xenodm
     $ doas rcctl start xenodm
     $ doas vi /etc/X11/xenodm/Xsetup_0
 
-        /usr/X11R6/bin/xsetroot -solid "#090909"
+        /usr/X11R6/bin/xsetroot -solid "#babbbd"
 
 login class
 
@@ -139,3 +139,8 @@ burp
 
     Include jdk-1.8.0 in path
         /usr/local/jdk-1.8.0/bin/
+
+npm
+
+    $ mkdir ~/.npm-global
+    $ npm config set prefix "$HOME/.npm-global"

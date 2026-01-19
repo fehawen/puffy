@@ -5,29 +5,30 @@ sticky yes
 
 fontname "JetBrains Mono:pixelsize=14"
 
-gap 40 10 10 10
+gap 20 40 20 20
 
 borderwidth 1
 moveamount 30
 
-color activeborder "#3c3835"
-color inactiveborder "#212222"
-color urgencyborder "#d15e85"
-color menubg "#008888"
-color menufg "#020307"
+color activeborder "#24292e"
+color inactiveborder "#969696"
+color urgencyborder "#d73a49"
+color menubg "#ffffff"
+color menufg "#24292e"
 
 command "firefox" "/usr/local/bin/firefox-esr"
 command "chromium" "/usr/local/bin/ungoogled-chromium"
-command "urxvtc" "/usr/local/bin/urxvtc"
 command "xterm" "/usr/X11R6/bin/xterm"
+command "urxvt" "/usr/local/bin/urxvt"
 command "zap" "/usr/local/bin/zaproxy"
 command "xmon" "/home/fehawen/bin/xmon"
 command "suspend" "/usr/sbin/zzz"
+command "wallpaper" "/home/fehawen/bin/paper"
 
 bind-mouse 4-1 window-move
 bind-mouse 4S-1 window-resize
 
-bind-key 4-Return urxvtc
+bind-key 4-Return xterm
 
 bind-key 4S-q window-close
 

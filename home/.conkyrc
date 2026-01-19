@@ -1,22 +1,16 @@
 
 conky.config = {
-    alignment = 'top_right',
+    alignment = 'bottom_right',
     background = true,
     double_buffer = true,
-    default_color = '#3c3835',
-    color1 = '#d15e85',
-    color2 = '#008888',
-    color3 = '#a1a6a9',
-    color4 = '#6087b0',
-    color5 = '#ae5fb0',
-    color6 = '#5fafae',
+    default_color = '#ffffff',
     draw_borders = false,
     draw_outline = false,
     draw_shades = false,
     use_xft = true,
     font = 'JetBrains Mono:pixelsize=14',
     gap_x = 15,
-    gap_y = 5,
+    gap_y = 6,
     out_to_x = true,
     own_window = true,
     own_window_class = 'Conky',
@@ -27,12 +21,9 @@ conky.config = {
 }
 
 conky.text = [[
-${color3}${time %a %d %b %H:%M}\
-${color}  │  \
+${time %a %d %b %H:%M}  │  \
 ${if_match "${exec ifconfig iwm0 | grep status | awk '{print $2}'}" == "active"}\
-${color5}${exec ifconfig iwm0 | grep ieee80211 | awk '{print $3}'}\
-${color}  │  ${endif}\
-${color4}${memeasyfree}\
-${color}  │  \
-${color6}${exec apm -l}%
+${exec ifconfig iwm0 | grep ieee80211 | awk '{print $3}'}  │  ${endif}\
+${memeasyfree}  │  \
+${exec apm -l}%
 ]];
