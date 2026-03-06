@@ -8,7 +8,7 @@ export TERMINAL=/usr/local/bin/urxvtc
 export BROWSER=/usr/local/bin/firefox-esr
 export TERM=xterm-256color
 
-PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin
+PATH=$HOME/bin:$HOME/.local/bin:/bin:/sbin:/usr/bin:/usr/sbin
 PATH=$PATH:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin
 PATH=$PATH:/usr/local/jdk-1.8.0/bin/
 export PATH
