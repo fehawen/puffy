@@ -5,7 +5,7 @@ Dotfiles for OpenBSD.
 
 doas
 
-    # echo "permit persist USERNAME" > /etc/doas.conf
+    $ echo "permit persist USERNAME" > /etc/doas.conf
 
 apmd
 
@@ -127,6 +127,9 @@ sysctl.conf
 
         # Hardware acceleration requires aperture access.
         machdep.allowaperture=2
+
+        # Oh, well.
+        hw.smt=1
 
 install intel firmware
 

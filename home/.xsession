@@ -28,12 +28,7 @@ else
     xrdb -DHOME="$HOME" < ~/.Xresources
 fi
 
-if [ -x ~/bin/paper ]; then
-    ~/bin/paper
-else
-    xsetroot -solid "#babbbd"
-fi
-
+xsetroot -solid "#babbbd"
 conky -qd -c ~/.conkyrc &
 
 /usr/X11R6/bin/cwm

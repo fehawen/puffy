@@ -23,5 +23,8 @@ alias ll="ls -lAh | less -R"
 
 set -o vi
 
+[ -f "$HOME"/.ksh.env ] && . "$HOME"/.ksh.env
+
+
 # shellcheck disable=2025
 PS1="\033[34m\W \033[35;1m\$ \033[0m"

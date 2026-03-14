@@ -5,7 +5,10 @@ sticky yes
 
 fontname "JetBrains Mono:pixelsize=14"
 
-gap 20 40 20 20
+gap 40 20 20 20
+
+htile 60
+vtile 60
 
 borderwidth 1
 moveamount 30
@@ -23,7 +26,6 @@ command "urxvt" "/usr/local/bin/urxvt"
 command "zap" "/usr/local/bin/zaproxy"
 command "xmon" "/home/fehawen/bin/xmon"
 command "suspend" "/usr/sbin/zzz"
-command "wallpaper" "/home/fehawen/bin/paper"
 
 bind-mouse 4-1 window-move
 bind-mouse 4S-1 window-resize
