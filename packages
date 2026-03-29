@@ -7,6 +7,9 @@ gopls
 git
 jetbrains-mono
 jq
+libva-utils
+# Lenovo Yoga 720 i3-IKB
+intel-media-driver
 mitmproxy
 nnn
 noto-emoji

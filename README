@@ -147,3 +147,30 @@ npm
 
     $ mkdir ~/.npm-global
     $ npm config set prefix "$HOME/.npm-global"
+
+
+firefox
+
+    General performance:
+
+        about:config
+
+            layers.acceleration.force-enabled -> true
+
+    VA-API (for Intel; enabled by default for AMD?):
+
+        Check output of `vainfo` (libva-utils).
+
+        about:support
+
+            Check if "Compositing" ids "WebRender (Software)", in which case
+            changes are necessary.
+
+            Verify if "HARDWARE_VIDEO_DECODING" is available. I will likely be
+            disabled for user.
+
+        about:config
+
+            gfx.webrender.software -> false
+            media.hardware-video-decoding.enabled -> true
+            gfx.webrender.all -> true
