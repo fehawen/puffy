@@ -156,6 +156,7 @@ firefox
         about:config
 
             layers.acceleration.force-enabled -> true
+            webgl.disabled -> true (if needed)
 
     VA-API (for Intel; enabled by default for AMD?):
 
