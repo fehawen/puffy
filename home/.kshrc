@@ -13,6 +13,8 @@ PATH=$PATH:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin
 PATH=$PATH:/usr/local/jdk-1.8.0/bin/
 export PATH
 
+export PKG_PATH="https://cdn.openbsd.org/pub/OpenBSD/snapshots/packages/amd64/"
+
 HISTCONTROL=ignoredups
 HISTFILE=$HOME/.ksh_history
 HISTSIZE=2000
