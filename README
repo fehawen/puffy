@@ -33,6 +33,24 @@ install intel firmware
 
     $ doas fw_update intel
 
+snapshots
+
+    /etc/installurl
+
+        https://cdn.openbsd.org/pub/OpenBSD
+
+    /etc/profile
+
+        export PKG_PATH="https://cdn.openbsd.org/pub/OpenBSD/snapshots/packages/amd64/"
+
+    Upgrade base system
+
+        $ doas sysupgrade -s
+
+    Update packages
+
+        $ doas pkg_add -u
+
 burp
 
     Download JAR v 1.7.36
