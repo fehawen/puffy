@@ -9,7 +9,6 @@ Xft.rgba: rgb
 
 XTerm*termName: xterm-256color
 XTerm*geometry: 100x20
-XTerm*internalBorder: 40
 XTerm*borderWidth: 0
 XTerm*utf8: true
 XTerm*locale: true
@@ -30,16 +29,22 @@ XTerm.VT100.translations: #override \n\
 #ifdef QHD
 Xft.dpi: 192
 Xcursor.size: 48
-XTerm*faceName: xft:JetBrains Mono:pixelsize=28
-URxvt.font: xft:JetBrains Mono:pixelsize=28
+XTerm*internalBorder: 80
+URxvt.internalBorder: 80
 #else
 Xcursor.size: 24
-XTerm*faceName: xft:JetBrains Mono:pixelsize=14
-URxvt.font: xft:JetBrains Mono:pixelsize=14
+XTerm*internalBorder: 40
+URxvt.internalBorder: 40
 #endif
 
+Xcursor.theme: dmz
+Xcursor.theme_core: true
+Xcursor.resized: true
+
+XTerm*faceName: xft:JetBrains Mono:size=10
+URxvt.font: xft:JetBrains Mono:size=10
+
 URxvt.letterSpace: -1
-URxvt.internalBorder: 40
 URxvt.geometry: 100x20
 
 URxvt.perl-ext-common: default,matcher,searchable-scrollback,-confirm-paste

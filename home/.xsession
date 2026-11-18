@@ -15,18 +15,20 @@ xset r rate 250 50
 xinput set-float-prop /dev/wsmouse0 300 0.4
 xinput set-float-prop /dev/wsmouse0 302 1.5
 
-SW=$(xrandr 2>&1 | grep "Screen 0: minimum" | sed -e 's/.*, current //' -e 's/ x.*//')
-if [ "${SW}" -eq 3200 ]; then
-        export QHD=1
-        export GDK_SCALE=2 # maybe
-        export GDK_DPI_SCALE=0.75 # maybe
+SW=$(xrandr | awk '/^Screen 0:/ {
+    sub(/,/, "", $8)
+    print $8
+}')
+
+if [ "${SW}" -ge 3000 ]; then
+    export QHD=1
+    export GDK_SCALE=1.5
+else
+    unset QHD
+    unset GDK_SCALE
 fi
 
-if [ "$HIDPI" = "1" ]; then
-    xrdb -DQHD=1 -DHOME="$HOME" < ~/.Xresources
-else
-    xrdb -DHOME="$HOME" < ~/.Xresources
-fi
+xrdb -merge -DQHD="${QHD:-0}" "$HOME/.Xresources"
 
 xsetroot -solid "#babbbd"
 conky -qd -c ~/.conkyrc &

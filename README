@@ -25,11 +25,7 @@ login class
 
     $ doas usermod -L staff USERNAME
 
-sysctl.conf
-
-    Run scripts/sysctlconf.sh and add to /etc/sysctl.conf as needed.
-
-install intel firmware
+install intel firmware if needed
 
     $ doas fw_update intel
 
@@ -51,14 +47,6 @@ snapshots
 
         $ doas pkg_add -u
 
-burp
-
-    Download JAR v 1.7.36
-        https://portswigger.net/burp/releases/professional-community-1-7-36
-
-    Include jdk-1.8.0 in path
-        /usr/local/jdk-1.8.0/bin/
-
 npm
 
     $ mkdir ~/.npm-global
@@ -74,17 +62,17 @@ firefox
             layers.acceleration.force-enabled -> true
             webgl.disabled -> true (if needed)
 
-    VA-API (for Intel; enabled by default for AMD?):
+    VA-API for Intel (enabled by default for AMD?):
 
-        Check output of `vainfo` (libva-utils).
+        Check output of vainfo (libva-utils).
 
         about:support
 
-            Check if "Compositing" ids "WebRender (Software)", in which case
-            changes are necessary.
+            Check if "Compositing" is "WebRender (Software)", in which case
+            changes might be necessary.
 
-            Verify if "HARDWARE_VIDEO_DECODING" is available. I will likely be
-            disabled for user.
+            Verify if "HARDWARE_VIDEO_DECODING" is available. It can be disabled
+            for user.
 
         about:config
 

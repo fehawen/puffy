@@ -5,11 +5,10 @@ firefox-esr
 go
 gopls
 git
+intel-media-driver
 jetbrains-mono
 jq
 libva-utils
-# Lenovo Yoga 720 i3-IKB
-intel-media-driver
 mitmproxy
 nnn
 noto-emoji
@@ -19,4 +18,4 @@ shellcheck
 ungoogled-chromium
 vim
 wireguard-tools
-zaproxy
+xcursor-dmz

@@ -7,10 +7,11 @@ export EDITOR=$VISUAL
 export TERMINAL=/usr/local/bin/urxvtc
 export BROWSER=/usr/local/bin/firefox-esr
 export TERM=xterm-256color
+export GOPATH=$HOME/go/bin
 
 PATH=$HOME/bin:$HOME/.local/bin:/bin:/sbin:/usr/bin:/usr/sbin
 PATH=$PATH:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin
-PATH=$PATH:/usr/local/jdk-1.8.0/bin/
+PATH=$PATH:$HOME/go/bin
 export PATH
 
 export PKG_PATH="https://cdn.openbsd.org/pub/OpenBSD/snapshots/packages/amd64/"
@@ -27,7 +28,6 @@ set -o vi
 
 # shellcheck disable=1091
 [ -f "$HOME"/.ksh.env ] && . "$HOME"/.ksh.env
-
 
 # shellcheck disable=2025
 PS1="\033[34m\W \033[35;1m\$ \033[0m"

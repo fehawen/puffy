@@ -3,12 +3,12 @@ unbind-mouse all
 
 sticky yes
 
-fontname "JetBrains Mono:pixelsize=14"
+fontname "JetBrains Mono:size=10"
 
-gap 40 20 20 20
+gap 50 25 25 25
 
-htile 60
-vtile 60
+htile 50
+vtile 50
 
 borderwidth 1
 moveamount 30
@@ -23,7 +23,6 @@ command "firefox" "/usr/local/bin/firefox-esr"
 command "chromium" "/usr/local/bin/ungoogled-chromium"
 command "xterm" "/usr/X11R6/bin/xterm"
 command "urxvt" "/usr/local/bin/urxvt"
-command "zap" "/usr/local/bin/zaproxy"
 command "xmon" "/home/fehawen/bin/xmon"
 command "suspend" "/usr/sbin/zzz"
 
