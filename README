@@ -3,15 +3,18 @@ puffy
 
 Dotfiles for OpenBSD.
 
+
 doas
 
     $ echo "permit persist USERNAME" > /etc/doas.conf
+
 
 apmd
 
     $ doas rcctl enable apmd
     $ doas rcctl set apmd flags -A
     $ doas rcctl start apmd
+
 
 xenodm
 
@@ -21,13 +24,16 @@ xenodm
 
         /usr/X11R6/bin/xsetroot -solid "#babbbd"
 
+
 login class
 
     $ doas usermod -L staff USERNAME
 
+
 install intel firmware if needed
 
     $ doas fw_update intel
+
 
 snapshots
 
@@ -47,10 +53,18 @@ snapshots
 
         $ doas pkg_add -u
 
+
 npm
 
     $ mkdir ~/.npm-global
     $ npm config set prefix "$HOME/.npm-global"
+
+
+temporary fix for xps 9343
+
+    /etc/bsd.re-config
+
+        disable dwiic
 
 
 firefox

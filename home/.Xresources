@@ -8,7 +8,7 @@ Xft.antialias: 1
 Xft.rgba: rgb
 
 XTerm*termName: xterm-256color
-XTerm*geometry: 100x20
+XTerm*geometry: 100x24
 XTerm*borderWidth: 0
 XTerm*utf8: true
 XTerm*locale: true
@@ -29,12 +29,12 @@ XTerm.VT100.translations: #override \n\
 #ifdef QHD
 Xft.dpi: 192
 Xcursor.size: 48
-XTerm*internalBorder: 80
-URxvt.internalBorder: 80
+XTerm*internalBorder: 60
+URxvt.internalBorder: 60
 #else
 Xcursor.size: 24
-XTerm*internalBorder: 40
-URxvt.internalBorder: 40
+XTerm*internalBorder: 30
+URxvt.internalBorder: 30
 #endif
 
 Xcursor.theme: dmz

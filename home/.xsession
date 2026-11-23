@@ -12,9 +12,6 @@ export MOZ_WEBRENDER=1
 xset b off
 xset r rate 250 50
 
-xinput set-float-prop /dev/wsmouse0 300 0.4
-xinput set-float-prop /dev/wsmouse0 302 1.5
-
 SW=$(xrandr | awk '/^Screen 0:/ {
     sub(/,/, "", $8)
     print $8
