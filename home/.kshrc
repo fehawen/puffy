@@ -7,7 +7,6 @@ export EDITOR=$VISUAL
 export TERMINAL=/usr/local/bin/urxvtc
 export BROWSER=/usr/local/bin/firefox-esr
 export TERM=xterm-256color
-export GOPATH=$HOME/go/bin
 
 PATH=$HOME/bin:$HOME/.local/bin:/bin:/sbin:/usr/bin:/usr/sbin
 PATH=$PATH:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin
@@ -23,6 +22,7 @@ HISTSIZE=2000
 alias la="ls -lAh"
 alias al="ls -A1 | less -R"
 alias ll="ls -lAh | less -R"
+alias xci="xclip -selection clipboard -i"
 
 set -o vi
 
